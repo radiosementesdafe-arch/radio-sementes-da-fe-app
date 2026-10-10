@@ -1,1 +1,12 @@
-{"name":"Rádio Sementes da Fé","short_name":"Sementes da Fé","start_url":".","display":"standalone","background_color":"#fbf8ef","theme_color":"#123f31","icons":[{"src":"logo.png","sizes":"any","type":"image/png"}]}
+{
+  "name":"Rádio Sementes da Fé",
+  "short_name":"Sementes da Fé",
+  "description":"Ouve em direto a Rádio Sementes da Fé.",
+  "lang":"pt-PT",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#f7f5ed",
+  "theme_color":"#102f27",
+  "icons":[{"src":"logo.png","sizes":"192x192","type":"image/png","purpose":"any"}]
+}
