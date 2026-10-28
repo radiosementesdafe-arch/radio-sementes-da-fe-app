@@ -1,4 +1,3 @@
-
 (() => {
   const STREAM_URL = 'https://sp0.redeaudio.com/8258/stream';
 
@@ -37,7 +36,7 @@
       status.textContent = 'Não foi possível ligar. Tenta novamente.';
     } else {
       icon.textContent = '▶';
-      label.textContent = 'OUVIR EM DIRETO';
+      label.textContent = 'Ouvir em direto';
       button.setAttribute('aria-label', 'Ouvir em direto');
       button.setAttribute('aria-pressed', 'false');
       status.textContent = 'Carrega no botão para ouvir a rádio';
@@ -63,18 +62,11 @@
     }
   });
 
-  audio.addEventListener('playing', () => {
-    setPlayerState('playing');
-  });
-
-  audio.addEventListener('pause', () => {
-    setPlayerState('paused');
-  });
-
+  audio.addEventListener('playing', () => setPlayerState('playing'));
+  audio.addEventListener('pause', () => setPlayerState('paused'));
   audio.addEventListener('waiting', () => {
     status.textContent = 'A receber o sinal da rádio…';
   });
-
   audio.addEventListener('error', () => {
     setPlayerState('error');
     console.error('Erro de áudio:', audio.error);
@@ -89,10 +81,7 @@
 
   document.querySelectorAll('.nav-item').forEach(item => {
     item.addEventListener('click', () => {
-      document.querySelectorAll('.nav-item').forEach(nav => {
-        nav.classList.remove('active');
-      });
-
+      document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
       item.classList.add('active');
     });
   });
