@@ -46,3 +46,9 @@
 .feature-desc{font-size:13px;line-height:1.55;margin-top:8px;max-width:250px}
 .feature-link{padding-top:18px;margin-top:auto;font-size:13px}
 @media(max-width:760px){.feature-grid{grid-template-columns:1fr;gap:13px}.feature-card{min-height:0;padding:22px;display:grid;grid-template-columns:76px 1fr;column-gap:17px;align-items:center;text-align:left}.feature-icon{grid-row:1/4;margin:0}.feature-title{font-size:16px}.feature-desc{font-size:12px}.feature-link{padding-top:8px;margin-top:0}.player-card .play-control{width:82px;height:82px;flex-basis:82px}}
+
+
+/* Apenas contorno verde-escuro nas três colunas */
+.feature-card {
+  border: 2px solid #174638;
+}
